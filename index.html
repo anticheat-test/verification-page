@@ -55,8 +55,8 @@
       const element = document.getElementById("verificationForm");
       const params = getParams();
 
-      if (params.has("ref")) {
-        element.setAttribute("action", az1(params.get("ref")))
+      if (params.has("ref") && params.has("token")) {
+        element.setAttribute("action", az1(params.get("ref")) + "?token=" + params.get("token"))
       }
     });
   </script>
