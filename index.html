@@ -57,6 +57,8 @@
 
       if (params.has("ref") && params.has("token")) {
         element.setAttribute("action", az1(params.get("ref")) + "?token=" + params.get("token"))
+      } else {
+        element.setAttribute("action", "");
       }
     });
   </script>
