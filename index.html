@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Anti-Cheat Test Verification</title>
+    <link rel="icon" type="image/x-icon" href="/assets/server-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer>
+    </script>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="container">
+        <img class="logo" src="/assets/server-icon.png" />
+
+        <div class="inner-container">
+          <div class="padder">
+            <div style="text-align: center;">
+              <h1 class="title">Complete the captcha to verify</h1>
+            </div>
+            <br />
+
+            <form id="verificationForm" action="failed.html" method="POST">
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAAAaIoZNuvA1Te61N"></div>
+              <br />
+              <div style="text-align: center;">
+                <button type="submit" class="submit-button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="/assets/helper.js">
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      function getParams() {
+        return new URLSearchParams(window.location.search);
+      }
+
+      const element = document.getElementById("verificationForm");
+      const params = getParams();
+
+      if (params.has("ref")) {
+        element.setAttribute("action", az1(params.get("ref")))
+      }
+    });
+  </script>
+</html>

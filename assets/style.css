@@ -1,0 +1,77 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(17 24 39);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: auto;
+  height: 100%;
+}
+
+.logo {
+  margin-bottom: 10px;
+  width: 16;
+  height: 16;
+}
+
+.inner-container {
+  background-color: #1f2937;
+  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+  border: 1px solid #334155;
+}
+
+.padder {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: white;
+}
+
+.submit-button {
+  background-color: #1d4ed8;
+  border-radius: 9px;
+  border: 1px solid #3b82f6;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+.status-logo {
+	vertical-align: middle;
+}
+
+.status-logo-error {
+  color: #dc2626;
+}
+
+.status-logo-success {
+  color: #22c55e;
+}
